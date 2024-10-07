@@ -2,6 +2,7 @@ backend:
   name: github
   repo: jellibeans-ted/test-decap-cms # Required; GitHub repo name
   branch: main # Required; default branch
+  domain: https://bc7e7174.test-decap-cms-ehk.pages.dev/
   auth:
     clientId: Ov23liETZqfpyhg21ITb
     clientSecret: 8da99bdd5c3d7530fde2643141f58928a5ff8a6b
