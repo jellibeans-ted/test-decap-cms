@@ -1,22 +1,18 @@
 backend:
   name: github
-  repo: username/repo
-  branch: main # Branch to update (optional; defaults to master)
-  site_domain: https://example.com
-  base_url: https://example.com
-  auth_endpoint: /api/auth
-media_folder: static/img
-public_folder: /img
+  repo: jellibeans-ted/test-decap-cms # Required; GitHub repo name
+  branch: main # Required; default branch
+  auth:
+    clientId: Ov23liETZqfpyhg21ITb
+    clientSecret: 8da99bdd5c3d7530fde2643141f58928a5ff8a6b
+media_folder: "public/uploads" # Folder where media files will be stored
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
+  - name: "posts" # Used in routes like /admin/collections/posts
+    label: "Posts"
+    folder: "posts" # The path to the folder where posts are stored
+    create: true # Allow users to create new posts
+    slug: "{{slug}}" # Custom URL Slug for each post
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
